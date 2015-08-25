@@ -1,4 +1,4 @@
-UserLogin = React.createClass({
+C.UserLogin = React.createClass({
   onSubmit(e){
     e.preventDefault();
     var self = this,

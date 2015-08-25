@@ -1,21 +1,30 @@
+C = {};
+
 FlowRouter.route("/", {
   name: "Home",
   action(params){
-    renderMainLayoutWith(<Home />)
+    renderMainLayoutWith(<C.Home />)
   }
 });
 
 FlowRouter.route("/login", {
   name: "Login",
   action(params){
-    renderMainLayoutWith(<UserLogin />)
+    renderMainLayoutWith(<C.UserLogin />)
+  }
+});
+
+FlowRouter.route("/comments", {
+  name:"CommentBox",
+  action(params){
+    renderMainLayoutWith(<C.CommentBox />)
   }
 })
 
 function renderMainLayoutWith(component){
   ReactLayout.render(MainLayout, {
-    header: <Header />,
+    header: <C.Header />,
     content: component, 
-    footer: <Footer />
+    footer: <C.Footer />
   })
 }

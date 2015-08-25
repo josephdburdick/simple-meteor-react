@@ -1,4 +1,4 @@
-Home = React.createClass({
+C.Home = React.createClass({
   render(){
     return(
       <div className="jumbotron">

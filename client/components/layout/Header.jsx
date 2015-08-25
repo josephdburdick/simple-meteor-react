@@ -1,4 +1,4 @@
-Header = React.createClass({
+C.Header = React.createClass({
   mixins: [ReactMeteorData],
   getMeteorData(){
     return {
@@ -39,6 +39,7 @@ Header = React.createClass({
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav navbar-right">
               <li><a href="/">Home</a></li>
+              <li><a href="/comments">Comments</a></li>
               { loginButton }
             </ul>
           </div>

@@ -1,4 +1,4 @@
-Footer = React.createClass({
+C.Footer = React.createClass({
   render(){
     return (
       <div></div>
