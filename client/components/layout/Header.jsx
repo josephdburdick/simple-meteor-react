@@ -39,7 +39,8 @@ C.Header = React.createClass({
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav navbar-right">
               <li><a href="/">Home</a></li>
-              <li><a href="/comments">Comments</a></li>
+              { currentUser ? <li><a href="/comments">Comments</a></li> : null }
+              { currentUser ? <li><a href="/carousel">Carousel</a></li> : null }
               { loginButton }
             </ul>
           </div>

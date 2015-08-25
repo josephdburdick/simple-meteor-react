@@ -5,7 +5,7 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
+#autopublish
 insecure
 accounts-password
 
@@ -15,3 +15,4 @@ kadira:react-layout
 fourseven:scss
 reywood:bootstrap3-sass
 chuangbo:marked
+anti:fake
