@@ -9,7 +9,7 @@ C.UserLogin = React.createClass({
       if (error){
         console.log(error.reason);
       } else {
-        FlowRouter.go('Home');
+        FlowRouter.go('home');
       }
     });
 

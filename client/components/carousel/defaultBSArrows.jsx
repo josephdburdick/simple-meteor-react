@@ -1,4 +1,4 @@
-C.defaultCarouselArrows = React.createClass({
+C.Carousel.DefaultCarouselArrows = React.createClass({
   render(){
     return (
       "Hello World"

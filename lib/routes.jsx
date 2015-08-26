@@ -2,21 +2,21 @@
 C = {};
 
 FlowRouter.route("/", {
-  name: "Home",
+  name: "home",
   action(params){
     renderMainLayoutWith(<C.Home />)
   }
 });
 
 FlowRouter.route("/login", {
-  name: "Login",
+  name: "login",
   action(params){
     renderMainLayoutWith(<C.UserLogin />)
   }
 });
 
 FlowRouter.route("/comments", {
-  name:"CommentBox",
+  name: "comments",
   subscriptions(params){
     this.register('comments', Meteor.subscribe('comments'))
   },
@@ -26,7 +26,7 @@ FlowRouter.route("/comments", {
 })
 
 FlowRouter.route("/carousel", {
-  name:"Carousel",
+  name: "carousel",
   action(params){
     renderMainLayoutWith(<C.Carousel />)
   }
@@ -35,23 +35,22 @@ FlowRouter.route("/carousel", {
 function renderMainLayoutWith(component){
   ReactLayout.render(MainLayout, {
     header: <C.Header />,
-    content: Meteor.user() ? component : <C.UserLogin />, 
+    content: Meteor.user() ? component : <C.Home />, 
     footer: <C.Footer />
   })
 }
 
 if (Meteor.isClient) {
-    var userWasLoggedIn = false;
-    Deps.autorun(function (c) {
-        if(!Meteor.userId()){
-            if(userWasLoggedIn)
-            {
-                console.log('Clean up');
-                FlowRouter.go('/');
-            }
-        }
-        else{
-            userWasLoggedIn = true;
-        }
-    });
+  var userWasLoggedIn = false;
+  Deps.autorun(function (c) {
+    if(!Meteor.userId()){
+      if(userWasLoggedIn){
+        console.log('Clean up');
+        FlowRouter.go('/login');
+      }
+    }
+    else{
+      userWasLoggedIn = true;
+    }
+  });
 }

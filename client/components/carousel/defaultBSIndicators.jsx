@@ -1,4 +1,4 @@
-C.defaultCarouselArrows = React.createClass({
+C.Carousel.DefaultCarouselIndicators = React.createClass({
   render(){
     return (
       <ol className="carousel-indicators">
