@@ -35,7 +35,7 @@ FlowRouter.route("/carousel", {
 function renderMainLayoutWith(component){
   ReactLayout.render(MainLayout, {
     header: <C.Header />,
-    content: Meteor.user() ? component : <C.Home />, 
+    content: component, 
     footer: <C.Footer />
   })
 }

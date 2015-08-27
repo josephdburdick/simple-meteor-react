@@ -1,7 +1,11 @@
 C.CommentForm = React.createClass({
+  onSubmit(e){
+    e.preventDefault();
+    console.log(e)
+  },
   render() {
     return (
-      <form className="form-inline commentForm" role="form">
+      <form className="form-inline commentForm" role="form" onSubmit={this.onSubmit}>
         <div className="row">
           <div className="col-lg-12">
             <div className="input-group input-group-lg">

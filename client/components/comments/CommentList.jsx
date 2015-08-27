@@ -1,4 +1,10 @@
 C.CommentList = React.createClass({
+  componentDidMount(){
+    let self = this;
+    $(window).scroll(function(e){
+      console.log(self);
+    });
+  },
   render(){
     let comments = this.props.comments;
 

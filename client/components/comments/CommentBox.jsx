@@ -5,6 +5,7 @@ C.CommentBox = React.createClass({
       comments: Comments.find().fetch()
     };
   },
+
   render(){
 
     return(

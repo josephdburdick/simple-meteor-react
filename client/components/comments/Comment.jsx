@@ -1,9 +1,10 @@
 C.Comment = React.createClass({
+
   render(){
     let self = this.props.data,
         rawMarkup = marked(self.text.toString(), { sanitize: true })
     return(
-      <li key={this.id}>
+      <li>
         <div className="commenterImage">
           <img src="http://lorempixel.com/50/50/" />
         </div>
